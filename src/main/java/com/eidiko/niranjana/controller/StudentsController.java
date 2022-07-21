@@ -23,4 +23,10 @@ public class StudentsController {
 		System.out.println("fetchStudentsDetailsByStdsName method in controller class");
 		return stdService.fetchStudentsDetailsByName(name);
 	}
+	
+	@GetMapping("/getStudentsDetailsByMultipleName")
+	public List<StudentsDTO> retrieveStudentsDetails(@RequestParam(name="name1") String name1,@RequestParam(name="name2") String name2,@RequestParam(name="name3") String name3){
+		System.out.println("retrieveStudentsDetails method of Controller class");
+		return stdService.fetchStudentsDetailsByMultipleName(name1,name2,name3);
+	}
 }

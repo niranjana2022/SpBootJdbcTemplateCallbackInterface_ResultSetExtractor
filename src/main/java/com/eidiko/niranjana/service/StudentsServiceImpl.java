@@ -34,5 +34,21 @@ public class StudentsServiceImpl implements StudentsService{
 	return listDTO;
 	}
 
+	@Override
+	public List<StudentsDTO> fetchStudentsDetailsByMultipleName(String name1, String name2, String name3) {
+		System.out.println("fetchStudentsDetailsByName method of StudentsServiceImpl class");
+		List<StudentsBO> listBO = null;
+		List<StudentsDTO> listDTO=new ArrayList();
+		
+		listBO = stdDao.getStudentsDetailsByMultipleName(name1, name2, name3);
+		System.out.println("listBO in service Impl class is : "+listBO);
+		listBO.forEach(bo->{
+			StudentsDTO dto=new StudentsDTO();
+			BeanUtils.copyProperties(bo, dto);
+			listDTO.add(dto);
+						});
+	return listDTO;
+	
+	}
 
 }

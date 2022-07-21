@@ -24,4 +24,16 @@ public class StudentsDAOImpl4 implements StudentsDAO {
 				
 		return listBO;
 	}
+//========================================================================================
+	@Override
+	public List<StudentsBO> getStudentsDetailsByMultipleName(String name1, String name2, String name3) {
+		System.out.println("getStudentsDetailsByMultipleName method in DAO impl class");
+		String retrieveMultipleData = "select sno,sname,saddrs,ssal from Students where sname IN(?,?,?)";
+		List<StudentsBO> listBO=null;
+		BeanPropertyRowMapper<StudentsBO> bprm = null;
+		bprm = new BeanPropertyRowMapper<StudentsBO>(StudentsBO.class);
+		listBO=jdbcTemplate.query(retrieveMultipleData,  new RowMapperResultSetExtractor<StudentsBO>(bprm),name1,name2,name3);
+				
+		return listBO;
+	}
 }

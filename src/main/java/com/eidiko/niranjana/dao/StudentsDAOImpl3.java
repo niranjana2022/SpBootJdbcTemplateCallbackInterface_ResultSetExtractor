@@ -40,5 +40,32 @@
 //			}, name );
 //		return listBO;
 //	}
+////=========================================================================================================
+//	@Override
+//	public List<StudentsBO> getStudentsDetailsByMultipleName(String name1, String name2, String name3) {
+//		System.out.println("getStudentsDetailsByMultipleName method in DAO impl class");
+//		String retrieveMultipleData = "select sno,sname,saddrs,ssal from Students where sname IN(?,?,?)";
+//		List<StudentsBO> listBO=null;
+//		listBO=jdbcTemplate.query(retrieveMultipleData,  //arg1
+//				 rs->{
+//				System.out.println("StudentDAOImpl.StudentExtractor.extractData(-)");
+//				List<StudentsBO>  listBOO=null;
+//				StudentsBO bo=null;
+//				//copy  RS object records to  List of StudentsBO collection
+//				listBOO=new ArrayList();
+//				while(rs.next()) {
+//					//get each record into StudentsBO class object
+//					bo=new StudentsBO();
+//					bo.setSno(rs.getInt(1));
+//					bo.setSname(rs.getString(2));
+//					bo.setSaddrs(rs.getString(3));
+//					bo.setSsal(rs.getFloat(4));
+//					//add each BO class obj to List colleciton
+//					listBOO.add(bo);
+//				}//while
+//				return listBOO;
+//			}, name1,name2,name3 );
+//		return listBO;
+//	}
 //	
 //}
