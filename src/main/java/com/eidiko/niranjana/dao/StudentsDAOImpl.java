@@ -1,6 +1,6 @@
 //package com.eidiko.niranjana.dao;
 //
-//import java.sql.ResultSet;         //Approach 1: Create our own Extractor class which is implements ResultSetExtractor using query method
+//import java.sql.ResultSet;         //Approach 1: Create our own Extractor class which is implements ResultSetExtractor<T>(I) using query method
 //import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;

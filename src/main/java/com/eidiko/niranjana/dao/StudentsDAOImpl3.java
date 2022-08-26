@@ -1,7 +1,7 @@
 //package com.eidiko.niranjana.dao;
 //
-//import java.util.ArrayList;
-//import java.util.List;
+//import java.util.ArrayList;    //APPROACH3: Here we use Lambda Expression created and implementes RowMapper<I> and copy RS record to StudentsBO class object
+//import java.util.List;		//Lambda exp based annonymous inner class implements ResultSetExtractor<T>(I)
 //
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.jdbc.core.JdbcTemplate;

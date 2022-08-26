@@ -1,5 +1,6 @@
-package com.eidiko.niranjana.dao;
+package com.eidiko.niranjana.dao; //APPROACH 4:we can use RowMapperResultSetExtractor<> pre-defined class of ResultSetExtractor<T>(I)..So no need to take own Custom class...
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
